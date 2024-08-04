@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Montserrat_Alternates } from "next/font/google";
 import "./globals.css";
 import { Navbar } from '@/components'
+import {ThemeProvider} from "@/contexts/ThemeProvider";
 
 const mont = Montserrat_Alternates({ subsets: ["latin"],
   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'] });
@@ -24,9 +25,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={mont.className}>
-        <Navbar />
-        {children}
+      <body className={mont.className+" dark"}>
+        <ThemeProvider>
+          <Navbar />
+          {children}
+        </ThemeProvider>  
       </body>
     </html>
   );

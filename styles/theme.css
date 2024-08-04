@@ -68,4 +68,14 @@
         font-weight: 600;
         line-height: 20px;
     }
+
+    .dark {
+        color : #006ABC;
+        background: #000;
+    }
+
+    .light {
+        color : #343C6A;
+        background: #fff;
+    }
 }
