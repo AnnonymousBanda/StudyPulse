@@ -4,8 +4,8 @@ import { Logo, Light, Setting, Hamburger } from '@/public'
 
 const Navbar = () => {
     return (
-        <div className='max-container px-[2rem] py-[1rem]'>
-          <nav className='flex items-center justify-between w-full'>
+        <div className='w-full px-[2rem] py-[1rem] border-solid border-b-[1px] border-[#BDBDBD] '>
+          <nav className='max-container flex items-center justify-between w-full'>
             <div>
               <Link href='/'>
                 <Image src={Logo} alt='logo of StudyPulse' width={200} height={40} className='md:block hidden' />
