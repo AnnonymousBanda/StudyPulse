@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Montserrat_Alternates } from "next/font/google";
 import "./globals.css";
-import { Navbar } from '@/components'
+import { Navbar, Sidebar } from '@/components'
 import {ThemeProvider} from "@/contexts/ThemeProvider";
 
 const mont = Montserrat_Alternates({ subsets: ["latin"],
@@ -28,7 +28,10 @@ export default function RootLayout({
       <body className={mont.className}>
         <ThemeProvider>
           <Navbar />
-          {children}
+          <div className="max-container flex gap-[2.5rem]">
+            <Sidebar />
+            {children}
+          </div>
         </ThemeProvider>  
       </body>
     </html>

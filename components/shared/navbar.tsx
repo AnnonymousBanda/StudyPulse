@@ -3,7 +3,7 @@ import {Logo, Menu, ToogleTheme, Profile} from '@/components'
 
 const Navbar = () => {
     return (
-        <div className='w-full wide:px-[0.5rem] px-[1rem] py-[0.5rem]'>
+        <div className='w-full py-[0.5rem]'>
           <nav className='max-container flex items-center justify-between w-full'>
             <div>
               <Link href='/'>
