@@ -1,20 +1,18 @@
-import Image from "next/image";
 import Link from "next/link";
-import { Logo } from '@/public'
-import {Menu, Theme, Profile} from '@/components'
+import {Logo, Menu, ToogleTheme, Profile} from '@/components'
 
 const Navbar = () => {
     return (
-        <div className='w-full px-[2rem] py-[1rem] border-solid border-b-[1px] border-[#BDBDBD] '>
+        <div className='w-full wide:px-[0.5rem] px-[1rem] py-[0.5rem]'>
           <nav className='max-container flex items-center justify-between w-full'>
             <div>
               <Link href='/'>
-                <Image src={Logo.LogoLight} alt='logo of StudyPulse' width={200} height={40} className='md:block hidden' />
+                <Logo/>
               </Link>
               <Menu/>
             </div>
             <div className='flex gap-[15px] items-center'>
-              <Theme/>
+              <ToogleTheme/>
               <Profile/>
             </div>
           </nav>

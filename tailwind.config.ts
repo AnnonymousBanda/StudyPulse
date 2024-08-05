@@ -19,7 +19,10 @@ const config: Config = {
         "light-bg" : "#D6DAE1",
         "dark-primary" : "#006ABC",
         "dark-bg" : "#191919",
-      }
+      },
+      screens: {
+        wide: "1440px",
+      },
     },
   },
   plugins: [],
