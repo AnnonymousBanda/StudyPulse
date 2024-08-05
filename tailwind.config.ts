@@ -15,9 +15,10 @@ const config: Config = {
       },
       colors: {
         "light-primary" : "#343C6A",
-        "light-bg" : "#fff",
+        "light-secondary" : "#BDBDD7",
+        "light-bg" : "#D6DAE1",
         "dark-primary" : "#006ABC",
-        "dark-bg" : "#000",
+        "dark-bg" : "#191919",
       }
     },
   },

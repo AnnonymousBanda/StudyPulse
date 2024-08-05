@@ -70,12 +70,10 @@
     }
 
     .dark {
-        color : #006ABC;
-        background: #000;
+        @apply bg-dark-bg text-dark-primary
     }
 
     .light {
-        color : #343C6A;
-        background: #fff;
+        @apply bg-light-bg text-light-primary
     }
 }
