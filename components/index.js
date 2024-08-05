@@ -1,4 +1,7 @@
-import Navbar from './navbar';
-import Theme from './theme';
+import Navbar from './shared/navbar'
+import Menu from './menu'
+import Theme from './theme'
+import Profile from './profile'
+import Setting from './setting'
 
-export { Navbar, Theme };
+export { Navbar, Menu, Theme, Profile, Setting }

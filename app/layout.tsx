@@ -25,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={mont.className+" dark"}>
+      <body className={mont.className}>
         <ThemeProvider>
           <Navbar />
           {children}

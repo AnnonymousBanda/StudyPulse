@@ -64,7 +64,7 @@ const Stats = {
   StatsDark
 }
 
-import Hamburger from '@/public/hamburger.svg'
+import ProfilePic from '@/public/profile.png'
 
 
-export { Logo, Theme, Setting, Hamburger, Focus, Home, Lecture, Schedule, Stats };
+export { Logo, Theme, Setting, Focus, Home, Lecture, Schedule, Stats, ProfilePic };
