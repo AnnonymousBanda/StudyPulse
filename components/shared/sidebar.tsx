@@ -1,5 +1,5 @@
 import {Home, Lecture, Focus, Schedule, Stats } from '@/public';
-import { SidebarItem } from '@/components';
+import { NavItems } from '@/components';
 
 const items = [
     {
@@ -36,9 +36,9 @@ const items = [
 
 const Sidebar = () => {
   return (
-    <div className='flex flex-col gap-[4rem] h-svh py-[5rem]'>
+    <div className='sm:flex sm:flex-col sm:gap-[4rem] sm:h-svh sm:py-[5rem] hidden'>
         {items.map((item, index) => (
-            <SidebarItem key={index} LightSvg={item.LightSvg} DarkSvg={item.DarkSvg} DisabledSvg={item.DisabledSvg} label={item.label}/>
+            <NavItems key={index} LightSvg={item.LightSvg} DarkSvg={item.DarkSvg} DisabledSvg={item.DisabledSvg} label={item.label}/>
         ))}
     </div>
   )

@@ -22,12 +22,12 @@ const SidebarItem: React.FC<SidebarItemProps> = ({ LightSvg, DarkSvg, DisabledSv
       <Link href={href}>
         <div className="flex flex-row gap-[1rem] items-center">
             <Image 
-              src={pathname===href?theme === 'light' ? LightSvg : DarkSvg: DisabledSvg} 
+              src={theme === 'light' ? LightSvg : DarkSvg} 
               alt='navigation logo'
               width={30}
               height={30}
             />
-            <span className={(pathname===href? theme==='light'?'text-light-primary':'text-dark-primary':'text-[#BDBDBD]')+' text-[2rem]'}>{label}</span>
+            <span className={(theme==='light'?'text-light-primary':'text-dark-primary')+' text-[2rem]'}>{label}</span>
         </div>                              
       </Link>
     </div>

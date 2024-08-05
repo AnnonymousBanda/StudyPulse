@@ -17,8 +17,9 @@ const config: Config = {
         "light-primary" : "#343C6A",
         "light-secondary" : "#BDBDD7",
         "light-bg" : "#D6DAE1",
-        "dark-primary" : "#006ABC",
-        "dark-bg" : "#191919",
+        "dark-primary" : "#B2B1B9",
+        "dark-secondary" : "#272829",
+        "dark-bg" : "#181818",
       },
       screens: {
         wide: "1440px",

@@ -6,7 +6,7 @@ import { Logo as LogoSvg } from '@/public'
 const Logo = () => {
   const { theme } = useTheme()
   return (
-    <Image src={theme==='light'?LogoSvg.LogoLight:LogoSvg.LogoDark} alt='logo of StudyPulse' width={120} height={24} className='md:block hidden' />
+    <Image src={theme==='light'?LogoSvg.LogoLight:LogoSvg.LogoDark} alt='logo of StudyPulse' width={120} height={24} className='sm:block hidden' />
   )
 }
 

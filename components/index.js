@@ -5,6 +5,6 @@ import ToogleTheme from './toogleTheme'
 import Profile from './profile'
 import Setting from './setting'
 import Sidebar from './shared/sidebar'
-import SidebarItem from './sidebarItem'
+import NavItems from './navItems'
 
-export { Navbar, Logo, Menu, ToogleTheme, Profile, Setting, Sidebar, SidebarItem }
+export { Navbar, Logo, Menu, ToogleTheme, Profile, Setting, Sidebar, NavItems }
