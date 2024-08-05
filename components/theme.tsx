@@ -21,10 +21,10 @@ const Theme = () => {
 	}
 
 	const ballClassName=clsx({'bg-light-primary' : theme === 'light'}, {'bg-dark-primary' : theme === 'dark'})
-	const toogleClassName=clsx({'bg-light-secondary' : theme === 'light'}, {'bg-dark-secondary' : theme === 'dark'})
+	const toogleClassName=clsx({'bg-light-secondary border-light-primary' : theme === 'light'}, {'bg-dark-secondary border-dark-primary' : theme === 'dark'})
 	return (
-		<div className={`flex items-center justify-around rounded-full h-[18px] w-[36px] relative box-content p-2 cursor-pointer ${toogleClassName}`}>
-			<div className={`w-[18px] h-[18px] rounded-full absolute ${ballInitialPosition.current} transition duration-300 ease-in-out ${ballClassName}`} ref={ballRef} onClick={HandleClick}></div>
+		<div className={`flex items-center justify-around rounded-full h-[18px] w-[36px] relative box-content p-2 border ${toogleClassName}`}>
+			<div className={`w-[18px] h-[18px] rounded-full absolute cursor-pointer ${ballInitialPosition.current} transition duration-300 ease-in-out ${ballClassName}`} ref={ballRef} onClick={HandleClick}></div>
 			<Image src={ThemeSvg.Light} alt='light theme' height={18} width={18}/>
 			<Image src={ThemeSvg.Dark} alt='dark theme' height={15} width={15}/>
 		</div>
