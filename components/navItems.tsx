@@ -7,11 +7,10 @@ import { usePathname } from "next/navigation";
 interface SidebarItemProps {
   LightSvg: string;
   DarkSvg: string;
-  DisabledSvg: string;
   label: string;
 }
 
-const SidebarItem: React.FC<SidebarItemProps> = ({ LightSvg, DarkSvg, DisabledSvg, label }) => {
+const SidebarItem: React.FC<SidebarItemProps> = ({ LightSvg, DarkSvg, label }) => {
   const pathname = usePathname();
   const { theme } = useTheme();
 

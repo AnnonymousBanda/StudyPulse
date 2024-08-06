@@ -9,31 +9,26 @@ const items = [
         label: 'Home',
         LightSvg: Home.HomeLight,
         DarkSvg: Home.HomeDark,
-        DisabledSvg: Home.HomeInactive
     },
     {
         label: 'Lecture',
         LightSvg: Lecture.LectureLight,
         DarkSvg: Lecture.LectureDark,
-        DisabledSvg: Lecture.LectureInactive
     },
     {
         label: 'Focus',
         LightSvg: Focus.FocusLight,
         DarkSvg: Focus.FocusDark,
-        DisabledSvg: Focus.FocusInactive
     },
     {
         label: 'Schedule',
         LightSvg: Schedule.ScheduleLight,
         DarkSvg: Schedule.ScheduleDark,
-        DisabledSvg: Schedule.ScheduleInactive
     },
     {
         label: 'Stats',
         LightSvg: Stats.StatsLight,
         DarkSvg: Stats.StatsDark,
-        DisabledSvg: Stats.StatsInactive
     }
 ]
 
@@ -79,7 +74,7 @@ const Menu: React.FC = () => {
           <div className={`flex justify-center items-center gap-[4rem] py-[2.5rem] pl-[1rem] pr-[2rem] ${bgColor} rounded-r-3xl`}>
             <div className='flex flex-col gap-[4rem]'>
               {items.map((item, index) => (
-                  <NavItems key={index} LightSvg={item.LightSvg} DarkSvg={item.DarkSvg} DisabledSvg={item.DisabledSvg} label={item.label}/>
+                  <NavItems key={index} LightSvg={item.LightSvg} DarkSvg={item.DarkSvg} label={item.label}/>
               ))}
             </div>
           </div>
