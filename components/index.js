@@ -7,4 +7,6 @@ import Setting from './setting'
 import Sidebar from './shared/sidebar'
 import NavItems from './navItems'
 
-export { Navbar, Logo, Menu, ToogleTheme, Profile, Setting, Sidebar, NavItems }
+import NavColor from './navColor'
+
+export { Navbar, Logo, Menu, ToogleTheme, Profile, Setting, Sidebar, NavItems, NavColor }
