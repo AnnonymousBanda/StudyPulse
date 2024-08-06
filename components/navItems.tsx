@@ -15,19 +15,20 @@ const SidebarItem: React.FC<SidebarItemProps> = ({ LightSvg, DarkSvg, label }) =
   const { theme } = useTheme();
 
   const href = `/${label==='Home'?'':label.toLowerCase()}`
-
   return (
     <div className="flex">
       <Link href={href}>
-        <div className="flex flex-row gap-[1rem] items-center">
-            <Image 
-              src={theme === 'light' ? LightSvg : DarkSvg} 
-              alt='navigation logo'
-              width={30}
-              height={30}
-            />
-            <span className={(theme==='light'?'text-light-primary':'text-dark-primary')+' text-[2rem]'}>{label}</span>
-        </div>                              
+        <div className="relative">
+          <div className={(pathname===href?`before:content-[''] before:absolute before:z-50 before:left-0 before:bottom-0 before:w-[110%] before:translate-x-[-5%] before:hover:h-6 before:transition-all before:ease-in-out before:h-2 before:opacity-20 ${theme==='light'?'before:bg-light-primary':'before:bg-dark-primary'} before:rounded-t-lg before:z-[-1] before:text`:'')+' flex flex-row gap-[1rem] items-center'}>
+              <Image
+                src={theme === 'light' ? LightSvg : DarkSvg} 
+                alt='navigation logo'
+                width={30}
+                height={30}
+              />
+              <span className={(theme==='light'?'text-light-primary':'text-dark-primary')+' text-[2rem]'}>{label}</span>
+          </div>                              
+        </div>
       </Link>
     </div>
   );
