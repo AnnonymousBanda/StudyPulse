@@ -6,7 +6,7 @@ const Navbar = () => {
       <>
         <NavColor />
           <div className='w-full py-[0.75rem]'>
-            <nav className='max-container flex items-center justify-between w-full'>
+            <nav className='flex items-center justify-between w-full'>
               <div>
                 <Link href='/'>
                   <Logo/>

@@ -8,9 +8,10 @@ interface SidebarItemProps {
   LightSvg: string;
   DarkSvg: string;
   label: string;
+  className: string | undefined;
 }
 
-const SidebarItem: React.FC<SidebarItemProps> = ({ LightSvg, DarkSvg, label }) => {
+const SidebarItem: React.FC<SidebarItemProps> = ({ LightSvg, DarkSvg, label, className }) => {
   const pathname = usePathname();
   const { theme } = useTheme();
 
@@ -26,7 +27,7 @@ const SidebarItem: React.FC<SidebarItemProps> = ({ LightSvg, DarkSvg, label }) =
                 width={30}
                 height={30}
               />
-              <span className={(theme==='light'?'text-light-primary':'text-dark-primary')+' text-[2rem]'}>{label}</span>
+              <span className={(theme==='light'?'text-light-primary':'text-dark-primary')+' text-[2rem] '+className}>{label}</span>
           </div>                              
         </div>
       </Link>

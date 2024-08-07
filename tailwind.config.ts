@@ -23,6 +23,7 @@ const config: Config = {
       },
       screens: {
         wide: "1440px",
+        ultra: "1500px",
       },
     },
   },

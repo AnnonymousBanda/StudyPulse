@@ -31,9 +31,9 @@ const items = [
 
 const Sidebar = () => {
   return (
-    <div className='sm:flex sm:flex-col sm:gap-[4rem] sm:h-svh sm:py-[5rem] hidden'>
+    <div className='flex flex-col gap-[4rem] py-[5rem]'>
         {items.map((item, index) => (
-            <NavItems key={index} LightSvg={item.LightSvg} DarkSvg={item.DarkSvg} label={item.label}/>
+            <NavItems key={index} LightSvg={item.LightSvg} DarkSvg={item.DarkSvg} label={item.label} className={"left-sidebar-icons"}/>
         ))}
     </div>
   )
