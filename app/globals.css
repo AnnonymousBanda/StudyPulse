@@ -14,4 +14,61 @@ html{
     margin: 0 auto;
     @apply wide:px-[0.5rem] px-[1rem]
   }
+
+  .container {
+    display: grid;
+    grid-template-areas: 
+      "navbar navbar navbar"
+      "left-sidebar main-section right-sidebar";
+    grid-template-rows: 55px 1fr;
+    grid-template-columns: 200px 1fr 200px;
+    height: 100vh;
+    gap: 10px;
+
+    overflow: hidden;
+  }
+
+
+.navbar {
+  grid-area: navbar;
+}
+
+.left-sidebar {
+  grid-area: left-sidebar;
+}
+
+.main-section {
+  grid-area: main-section;
+}
+
+.right-sidebar {
+  grid-area: right-sidebar;
+}
+
+@media (max-width: 1024px) {
+  .right-sidebar {
+    display: none;
+  }
+
+  .container {
+    grid-template-areas: 
+      "navbar navbar"
+      "left-sidebar main-section";
+    grid-template-columns: 200px 1fr;
+  }
+
+  }
+  
+@media (max-width: 640px) {
+  .left-sidebar, .right-sidebar {
+    display: none;
+  }
+  
+  .container {
+    grid-template-areas: 
+      "navbar"
+      "main-section";
+    grid-template-columns: 1fr;
+  }
+}
 }

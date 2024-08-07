@@ -1,10 +1,10 @@
 "use client";
 import { useTheme } from "@/contexts/ThemeProvider";
 
-const navColor = ({children}:{children:React.ReactNode}) => {
+const navColor = () => {
     const {theme} = useTheme();
   return (
-    <div className={"opacity-100 "+(theme==='light'?'bg-light-secondary':'bg-dark-secondary')}>{children}</div>
+    <div className={"h-[55px] w-screen absolute z-[-100] top-0 left-0 opacity-100 "+(theme==='light'?'bg-light-secondary':'bg-dark-secondary')}></div>
   )
 }
 

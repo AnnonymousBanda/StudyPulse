@@ -3,7 +3,8 @@ import {Logo, Menu, ToogleTheme, Profile, NavColor} from '@/components'
 
 const Navbar = () => {
     return (
-        <NavColor>
+      <>
+        <NavColor />
           <div className='w-full py-[0.75rem]'>
             <nav className='max-container flex items-center justify-between w-full'>
               <div>
@@ -18,7 +19,7 @@ const Navbar = () => {
               </div>
             </nav>
           </div>
-        </NavColor>
+      </>
       );
 }
 

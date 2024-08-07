@@ -23,7 +23,9 @@ export const ThemeProvider = ({children}:{children : React.ReactNode }) => {
     
     return(
         <ThemeContext.Provider value={{theme, setTheme}}>
-            {children}
+            <div className={"w-screen h-screen"}> {/* opacity-100 "+(theme==='light'?'bg-light-secondary':'bg-dark-secondary')*/}
+                {children}
+            </div>
         </ThemeContext.Provider>
     )
 }
