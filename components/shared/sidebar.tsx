@@ -31,7 +31,7 @@ const items = [
 
 const Sidebar = () => {
   return (
-    <div className='sm:flex sm:flex-col sm:gap-[4rem] sm:h-svh sm:py-[5rem] hidden'>
+    <div className='sm:flex sm:flex-col sm:gap-[4rem] sm:h-svh sm:py-[5rem] pr-[2.5rem] hidden'>
         {items.map((item, index) => (
             <NavItems key={index} LightSvg={item.LightSvg} DarkSvg={item.DarkSvg} label={item.label}/>
         ))}
