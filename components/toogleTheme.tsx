@@ -25,8 +25,8 @@ const ToogleTheme = () => {
 	return (
 		<div className={`flex items-center justify-around rounded-full h-[18px] w-[36px] relative box-content p-[0.25rem] border ${toogleClassName}`}>
 			<div className={`w-[18px] h-[18px] rounded-full absolute cursor-pointer ${ballInitialPosition.current} transition duration-300 ease-in-out ${ballClassName}`} ref={ballRef} onClick={HandleClick}></div>
-			<Image src={ThemeSvg.Light} alt='light theme' height={18} width={18}/>
-			<Image src={ThemeSvg.Dark} alt='dark theme' height={15} width={15}/>
+			<Image src={ThemeSvg.Light} alt='light theme' height={0} width={0} className='w-[1.8rem] h-auto'/>
+			<Image src={ThemeSvg.Dark} alt='dark theme' height={0} width={0} className='w-[1.5rem] h-auto'/>
 		</div>
 	)
 }
