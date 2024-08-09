@@ -24,8 +24,9 @@ const SidebarItem: React.FC<SidebarItemProps> = ({ LightSvg, DarkSvg, label, cla
               <Image
                 src={theme === 'light' ? LightSvg : DarkSvg} 
                 alt='navigation logo'
-                width={30}
-                height={30}
+                width={0}
+                height={0}
+                className="w-[3rem] h-auto"
               />
               <span className={(theme==='light'?'text-light-primary':'text-dark-primary')+' text-[2rem] '+className}>{label}</span>
           </div>                              
