@@ -27,20 +27,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={mont.className}>
         <ThemeProvider>
-          <div className="max-container container">
-            <nav className="navbar">
-              <Navbar />
-            </nav>
-            <div className="left-sidebar">
-              <Sidebar />
-            </div>
-            <section className="main-section">
-              {children}
-            </section>
-            <div className="right-sidebar">
-              <h2>Right Sidebar</h2>
-            </div>
-          </div>
+          {children}
         </ThemeProvider>  
       </body>
     </html>
