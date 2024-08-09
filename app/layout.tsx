@@ -1,3 +1,7 @@
+import {
+  ClerkProvider,
+} from '@clerk/nextjs'
+
 import type { Metadata } from "next";
 import { Montserrat_Alternates } from "next/font/google";
 import "./globals.css";
@@ -24,25 +28,27 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={mont.className}>
-        <ThemeProvider>
-          <div className="max-container container">
-            <nav className="navbar">
-              <Navbar />
-            </nav>
-            <div className="left-sidebar">
-              <Sidebar />
+    <ClerkProvider>
+      <html lang="en">
+        <body className={mont.className}>
+          <ThemeProvider>
+            <div className="max-container container">
+              <nav className="navbar">
+                <Navbar />
+              </nav>
+              <div className="left-sidebar">
+                <Sidebar />
+              </div>
+              <section className="main-section">
+                {children}
+              </section>
+              <div className="right-sidebar">
+                <h2>Right Sidebar</h2>
+              </div>
             </div>
-            <section className="main-section">
-              {children}
-            </section>
-            <div className="right-sidebar">
-              <h2>Right Sidebar</h2>
-            </div>
-          </div>
-        </ThemeProvider>  
-      </body>
-    </html>
+          </ThemeProvider>  
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }

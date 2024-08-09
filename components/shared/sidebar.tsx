@@ -1,5 +1,6 @@
 import {Home, Lecture, Focus, Schedule, Stats } from '@/public';
 import { NavItems } from '@/components';
+import { SignInButton, SignedOut, SignOutButton, SignedIn, SignUpButton } from '@clerk/nextjs'
 
 const items = [
     {
@@ -35,6 +36,16 @@ const Sidebar = () => {
         {items.map((item, index) => (
             <NavItems key={index} LightSvg={item.LightSvg} DarkSvg={item.DarkSvg} label={item.label} className={"left-sidebar-icons"}/>
         ))}
+        <SignedOut>
+            <SignInButton mode='modal'/>
+        </SignedOut>
+        <SignedOut>
+            <SignUpButton mode='modal'/>
+        </SignedOut>
+        <SignedIn>
+            <SignOutButton />
+        </SignedIn>
+
     </div>
   )
 }
