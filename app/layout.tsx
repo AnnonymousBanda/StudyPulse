@@ -5,7 +5,6 @@ import {
 import type { Metadata } from "next";
 import { Montserrat_Alternates } from "next/font/google";
 import "./globals.css";
-import { Navbar, Sidebar } from '@/components'
 import {ThemeProvider} from "@/contexts/ThemeProvider";
 
 const mont = Montserrat_Alternates({ subsets: ["latin"],
@@ -32,20 +31,7 @@ export default function RootLayout({
       <html lang="en">
         <body className={mont.className}>
           <ThemeProvider>
-            <div className="max-container container">
-              <nav className="navbar">
-                <Navbar />
-              </nav>
-              <div className="left-sidebar">
-                <Sidebar />
-              </div>
-              <section className="main-section">
-                {children}
-              </section>
-              <div className="right-sidebar">
-                <h2>Right Sidebar</h2>
-              </div>
-            </div>
+            {children}
           </ThemeProvider>  
         </body>
       </html>
