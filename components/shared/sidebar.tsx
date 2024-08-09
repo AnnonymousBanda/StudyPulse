@@ -37,10 +37,10 @@ const Sidebar = () => {
             <NavItems key={index} LightSvg={item.LightSvg} DarkSvg={item.DarkSvg} label={item.label} className={"left-sidebar-icons"}/>
         ))}
         <SignedOut>
-            <SignInButton mode='modal'/>
+            <SignInButton />
         </SignedOut>
         <SignedOut>
-            <SignUpButton mode='modal'/>
+            <SignUpButton />
         </SignedOut>
         <SignedIn>
             <SignOutButton />
